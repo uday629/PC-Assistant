@@ -1,0 +1,6 @@
+*.exe
+*.dmg
+*.zip
+*.scan.json
+Thumbs.db
+.DS_Store

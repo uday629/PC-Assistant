@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PC Assistant - Read Me</title>
+<style>
+  :root{--blue:#1F6BFF;--violet:#6A2BFF;--red:#FF1F56;--orange:#FF8A00;--green:#22C987;--black:#08080A;
+    --grad:linear-gradient(100deg,#1f6bff 0%,#6a2bff 30%,#ff1f56 65%,#ff8a00 100%);
+    --ink:#F4F3F1;--mute:rgba(244,243,241,.7);--dim:rgba(244,243,241,.45);--line:rgba(255,255,255,.09);--card:rgba(255,255,255,.035);
+    --font:"Inter Tight","Segoe UI",system-ui,-apple-system,"Nirmala UI",sans-serif;--mono:"JetBrains Mono",Consolas,ui-monospace,monospace}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--black);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.65;letter-spacing:-.01em}
+  a{color:#8fb5ff}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px 80px}
+  header{padding:64px 0 40px;text-align:center;background:radial-gradient(700px 300px at 50% 0%,rgba(106,43,255,.25),transparent)}
+  header img{width:110px;height:110px;border-radius:50%;box-shadow:0 18px 60px rgba(106,43,255,.45)}
+  h1{font-size:52px;line-height:1.05;margin:18px 0 8px;letter-spacing:-.045em;font-weight:800}
+  h2{font-size:28px;letter-spacing:-.03em;margin:56px 0 14px}
+  h3{font-size:19px;margin:26px 0 8px}
+  .gr{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{font-size:19px;color:var(--mute);max-width:720px;margin:0 auto}
+  .mono{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+  nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:26px 0 0}
+  nav a{padding:7px 14px;border:1px solid var(--line);border-radius:999px;color:var(--mute);text-decoration:none;font-size:14px;background:var(--card)}
+  nav a:hover{color:#fff;border-color:rgba(255,138,0,.5)}
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+  .btn{display:inline-block;padding:13px 24px;border-radius:14px;font-weight:700;text-decoration:none;color:#fff;background:var(--grad);box-shadow:0 10px 30px rgba(106,43,255,.3)}
+  .btn.ghost{background:var(--card);border:1px solid var(--line);box-shadow:none}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin:14px 0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+  .grid .card{margin:0}
+  .card b.t{display:block;font-size:17px;margin-bottom:4px}
+  .shot{width:100%;border-radius:14px;border:1px solid var(--line);margin:10px 0;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+  code,kbd{font-family:var(--mono);font-size:13.5px;background:#111116;border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+  pre{background:#050507;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-family:var(--mono);font-size:13px}
+  ol li,ul li{margin:6px 0}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{text-align:left;padding:10px;border-top:1px solid var(--line);vertical-align:top}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+  .note{border-left:3px solid var(--orange);background:rgba(255,138,0,.06)}
+  .ok{border-left:3px solid var(--green);background:rgba(34,201,135,.06)}
+  .tag{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:700;background:rgba(31,107,255,.15);color:#9dbdff;margin-right:6px}
+  footer{text-align:center;margin-top:70px;color:var(--dim)}
+  footer .made{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+</style>
+</head>
+<body>
+<header>
+  <img src="images/logo.png" alt="PC Assistant logo">
+  <h1>PC <span class="gr">Assistant</span></h1>
+  <p class="lead">A powerful AI assistant that works <b>on your own computer</b>: fixes problems, runs terminal work, installs software, cleans and organizes files, checks security and explains anything on your screen. For Windows and macOS.</p>
+  <div class="mono" style="margin-top:14px">Created by Bunnys Framelab &middot; Version 1.2.0</div>
+  <div class="btns">
+    <a class="btn" href="https://github.com/uday629/PC-Assistant/releases/latest">Download</a>
+    <a class="btn ghost" href="https://www.instagram.com/bunnysframelab/">Instagram @bunnysframelab</a>
+  </div>
+  <nav>
+    <a href="#what">What it is</a><a href="#why">Why</a><a href="#features">Features</a><a href="#install-win">Install on Windows</a>
+    <a href="#install-mac">Install on Mac</a><a href="#ai">Set up the AI</a><a href="#use">How to use</a><a href="#safety">Safety</a>
+    <a href="#faq">Problems / FAQ</a><a href="#bangla">Bangla guide</a><a href="#uninstall">Uninstall</a>
+  </nav>
+</header>
+
+<div class="wrap">
+  <img class="shot" src="images/chat.png" alt="PC Assistant chat screen">
+
+  <h2 id="what">What is PC Assistant?</h2>
+  <p>PC Assistant is a desktop app with a chat window. You tell it, in your own words (English, Bangla or Banglish), what you need: "my C drive is full", "is my PC hacked?", "install this file", "sort my Downloads by type", "where are Photoshop's settings?". It looks at your computer, explains what it found in simple words, asks before anything risky, does the work, and checks that it worked.</p>
+  <p>It runs on <b>local AI</b> (a model on your own computer through Ollama), so your chats and files stay private and it costs nothing. If you prefer, it also works with cloud AI (OpenAI, Claude, Gemini, OpenRouter, Groq, DeepSeek and more) using your own API key.</p>
+
+  <h2 id="why">Who made it and why</h2>
+  <div class="card">
+    <p style="margin-top:0"><b>Made by Bunnys Framelab</b> (<a href="https://www.instagram.com/bunnysframelab/">@bunnysframelab</a>).</p>
+    <p>Most people get stuck on small computer problems every day: a full drive, an app that will not install, an error message they do not understand, a setting they cannot find, a worry that the PC might be hacked. Fixing these usually means searching forums, copying commands you do not understand, or waiting for someone who "knows computers".</p>
+    <p style="margin-bottom:0">PC Assistant was built to be that person: one assistant that can see the problem, explain it, and fix it with your permission, privately, on your own machine, in the language you speak.</p>
+  </div>
+
+  <h2 id="features">Features</h2>
+  <div class="grid">
+    <div class="card"><b class="t">Chat that does the work</b>Runs terminal commands (PowerShell on Windows, zsh on Mac), reads and edits files, changes code, settings and configs for you.</div>
+    <div class="card"><b class="t">Ask about your screen</b>Press <kbd>Ctrl+Shift+Space</kbd> anywhere, select what you do not understand, then choose <i>Explain</i>, <i>Guide me</i> or <i>Do it for me</i>.</div>
+    <div class="card"><b class="t">Install anything</b>Drop a setup file (exe, msi, dmg, pkg, zip) into the chat. It checks the file and its signature, then installs it. Knows winget and Homebrew.</div>
+    <div class="card"><b class="t">Clean the drive</b>Scans temp files, caches, update leftovers, old installers and more. Shows what is safe and what you would lose, then cleans only what you approve.</div>
+    <div class="card"><b class="t">Organize files</b>"Put images, screenshots, videos and documents in separate folders", "sort photos by month and year", custom rules. Preview first, undo anytime.</div>
+    <div class="card"><b class="t">Security check</b>Antivirus, firewall, suspicious startup items and background tasks, open ports, remote access, proxy, hosts file. Explains each finding and fixes it.</div>
+    <div class="card"><b class="t">App help</b>"Where are this app's settings?", "where does it keep its files?", "how do I do X in it?" It finds the real folders on your computer and the steps online.</div>
+    <div class="card"><b class="t">Look and settings</b>Change wallpaper, dark or light mode, transparency, and opens the right settings page with step-by-step guidance for everything else.</div>
+    <div class="card"><b class="t">Web research</b>Searches the internet with a built-in private browser and reads pages when it does not know something, with source links.</div>
+    <div class="card"><b class="t">Models in one click</b>Install Ollama, download 47 ready models (with "fits your GPU" hints), import your existing .gguf files or model folder, or use any API key.</div>
+    <div class="card"><b class="t">You stay in control</b>Ask / Smart / Autopilot approval modes, extra confirmation for critical actions, an emergency Stop hotkey, a full log of every action.</div>
+    <div class="card"><b class="t">Bangla friendly</b>Write in Bangla, Banglish or English. It answers in the same language.</div>
+  </div>
+
+  <h2 id="install-win">Install on Windows</h2>
+  <p><b>Needs:</b> Windows 10 or 11 (64-bit). 8 GB RAM minimum; 16 GB+ and an NVIDIA/AMD GPU with 6 GB+ memory recommended for local AI.</p>
+  <ol>
+    <li>Open the <a href="https://github.com/uday629/PC-Assistant/releases/latest">latest release</a> and download <code>PC-Assistant-Setup-1.2.0-windows.exe</code>.</li>
+    <li>Double-click it. Windows may show <i>"Windows protected your PC"</i> because the app is new and not code-signed: click <b>More info</b> &rarr; <b>Run anyway</b>.</li>
+    <li>Choose the install folder (any drive is fine) and click <b>Install</b>. A desktop shortcut is created and the app opens.</li>
+    <li>Continue with <a href="#ai">Set up the AI</a>.</li>
+  </ol>
+
+  <h2 id="install-mac">Install on Mac</h2>
+  <p><b>Needs:</b> a recent macOS (13 Ventura or newer recommended). Apple Silicon (M1/M2/M3/M4) with 16 GB+ memory is best for local AI.</p>
+  <ol>
+    <li>Find your chip: Apple menu &rarr; <b>About This Mac</b>. "Apple M..." = Apple Silicon, "Intel" = Intel.</li>
+    <li>From the <a href="https://github.com/uday629/PC-Assistant/releases/latest">latest release</a> download <code>PC-Assistant-1.2.0-mac-arm64.dmg</code> (Apple Silicon) or <code>PC-Assistant-1.2.0-mac-x64.dmg</code> (Intel).</li>
+    <li>Open the .dmg and drag <b>PC Assistant</b> into <b>Applications</b>.</li>
+    <li>First start: the app is not notarized by Apple yet, so macOS blocks a normal double-click. Right-click (or Control-click) PC Assistant in Applications &rarr; <b>Open</b> &rarr; <b>Open</b>. If there is no Open button, go to System Settings &rarr; Privacy &amp; Security and click <b>Open Anyway</b>.</li>
+    <li>Allow the permissions when asked (System Settings &rarr; Privacy &amp; Security):
+      <ul><li><b>Screen Recording</b> - needed for "Ask about screen" and screenshots.</li>
+      <li><b>Accessibility</b> - needed only if you want it to click and type for you.</li>
+      <li><b>Automation (System Events / Finder)</b> - for wallpaper, dark mode and moving files to the Trash.</li></ul></li>
+  </ol>
+  <div class="card note">The Mac version is built automatically by GitHub on Apple computers from the same code as the Windows version. If something does not work on your Mac, please report it (see <a href="#faq">FAQ</a>).</div>
+
+  <h2 id="ai">Set up the AI (one time)</h2>
+  <h3>Option A: Local AI (free, private) - recommended</h3>
+  <ol>
+    <li>Open <b>AI Models</b> in the app.</li>
+    <li>If Ollama is not installed, click <b>Download and install Ollama</b> and choose a folder.</li>
+    <li>Under <b>Download models</b>, pick one marked <span class="tag">recommended</span> that says <i>fits your GPU</i>, and click <b>Download</b>.</li>
+    <li>Click <b>Use</b> on the downloaded model. Done.</li>
+  </ol>
+  <table>
+    <tr><th>Your computer</th><th>Good model to start with</th></tr>
+    <tr><td>GPU with 8-16 GB, or Mac with 16 GB+</td><td><code>qwen3-vl:8b-instruct</code> (sees screenshots, fast, best all-round)</td></tr>
+    <tr><td>GPU with 6 GB, or 8 GB Mac</td><td><code>qwen3-vl:4b-instruct</code></td></tr>
+    <tr><td>Weak PC, no GPU</td><td><code>qwen3-vl:2b-instruct</code>, or use an API key (Option B)</td></tr>
+    <tr><td>24 GB+ GPU / 32 GB+ Mac</td><td><code>qwen3-vl:30b</code> or <code>gpt-oss:20b</code></td></tr>
+  </table>
+  <p>Already have models? Use <b>Scan a folder for models</b> or <b>Import one .gguf file</b>, or point the app to LM Studio / llama.cpp on the API Keys page.</p>
+  <h3>Option B: Cloud AI with your API key</h3>
+  <p>Open <b>API Keys</b>, choose a provider (OpenAI, Anthropic Claude, Google Gemini, OpenRouter, Groq, DeepSeek, Mistral, xAI...), paste your key, click <b>Add and test</b>, then click a model to use it. Keys are encrypted by your operating system and only sent to that provider.</p>
+  <img class="shot" src="images/api-keys.png" alt="API keys page">
+
+  <h2 id="use">How to use</h2>
+  <h3>Just ask in the chat</h3>
+  <pre>My C drive is full, clean it safely
+Is my PC hacked? Check everything
+Install "D:\Downloads\setup.exe"
+Organize my Downloads: images, screenshots, videos, documents in separate folders
+Sort the photos in Pictures into year and month folders
+Where are VS Code's settings and how do I change the font size?
+Turn on dark mode and set this picture as wallpaper: C:\Pictures\sky.jpg
+amar internet slow, keno check kore thik kore dao</pre>
+  <h3>Ask about anything on your screen</h3>
+  <ol>
+    <li>Press <kbd>Ctrl+Shift+Space</kbd> (change it in Settings).</li>
+    <li>Drag a box around the thing you do not understand (or press <kbd>Enter</kbd> for the whole screen).</li>
+    <li>Type your question (optional) and choose <b>Explain</b>, <b>Guide me</b> or <b>Do it for me</b>.</li>
+  </ol>
+  <h3>Approval modes</h3>
+  <table>
+    <tr><th>Mode</th><th>What happens</th></tr>
+    <tr><td><b>Ask</b></td><td>Every change waits for your Approve button.</td></tr>
+    <tr><td><b>Smart</b> (default)</td><td>Looking and small safe actions run directly; installs, deletes, admin commands and system changes ask first.</td></tr>
+    <tr><td><b>Autopilot</b></td><td>Works alone until the task is done. Critical actions (formatting disks, turning off security, deleting system files) still ask unless you turn that off.</td></tr>
+  </table>
+  <p>Other shortcuts: <kbd>Ctrl+Shift+A</kbd> show/hide the chat, <kbd>Ctrl+Shift+X</kbd> stop the assistant immediately.</p>
+  <img class="shot" src="images/settings.png" alt="Settings page">
+
+  <h2 id="safety">Safety and privacy</h2>
+  <div class="card ok">
+    <ul style="margin:0">
+      <li>With local AI nothing leaves your computer except web searches the assistant makes.</li>
+      <li>Every risky action shows an Approve card with the exact command; you can edit or deny it.</li>
+      <li>Deleted files go to the Recycle Bin / Trash by default; file organizing can be undone; edited files get a .bak copy.</li>
+      <li>Web pages are read in a locked private browser that cannot download files or reach your local network. After the AI has read web content, risky actions always ask you, so a web page cannot trick it into acting alone.</li>
+      <li>System folders are protected from organizing and cleaning.</li>
+      <li>API keys are encrypted with Windows DPAPI / macOS Keychain.</li>
+      <li>If you choose a cloud AI provider, your messages, the screenshots you send and basic computer details (computer name, user folder path) go to that provider.</li>
+    </ul>
+  </div>
+  <div class="card note"><b>Owner full-access mode</b> (Settings) tells the AI you own the computer so it does not refuse tasks on it. Use it only on your own computer. The approval rules still apply. Never use PC Assistant on computers you do not own or manage.</div>
+
+  <h2 id="faq">Problems / FAQ</h2>
+  <h3>"No model selected" or the AI does not answer</h3>
+  <p>Open AI Models, make sure Ollama shows <i>running</i>, and click <b>Use</b> on a downloaded model. The first answer after starting the computer can take 20-30 seconds while the model loads.</p>
+  <h3>It is slow</h3>
+  <p>Pick a smaller model, or one marked <i>fits your GPU</i>. Close heavy apps and games. Cloud models (API key) are fastest on weak computers.</p>
+  <h3>The shortcut key does nothing</h3>
+  <p>Another app uses it. Settings &rarr; Shortcut keys &rarr; click the box and press a new combination.</p>
+  <h3>Mac: "Ask about screen" shows a black picture</h3>
+  <p>Allow Screen Recording for PC Assistant in System Settings &rarr; Privacy &amp; Security, then quit and reopen the app.</p>
+  <h3>Windows: drag and drop does not work</h3>
+  <p>Windows blocks drag and drop into apps running as administrator. Use the <b>File</b> button, or run the app normally.</p>
+  <h3>Report a bug or ask for a feature</h3>
+  <p>Open an <a href="https://github.com/uday629/PC-Assistant/issues">issue on GitHub</a> or message <a href="https://www.instagram.com/bunnysframelab/">@bunnysframelab</a> on Instagram.</p>
+
+  <h2 id="bangla">Bangla quick guide</h2>
+  <div class="card">
+    <ol style="margin:0">
+      <li><b>Install:</b> Release page theke Windows hole <code>.exe</code>, Mac hole <code>.dmg</code> download kore install korun. Windows "protected your PC" dekhale <b>More info &rarr; Run anyway</b>. Mac-e prothombar right-click &rarr; <b>Open</b>.</li>
+      <li><b>AI chalu:</b> <b>AI Models</b> page &rarr; Ollama install &rarr; <code>qwen3-vl:8b-instruct</code> download &rarr; <b>Use</b>. Ba API Keys page-e nijer key din.</li>
+      <li><b>Kaj korano:</b> Chat-e Bangla/Banglish-e likhun, jemon "amar C drive vore geche, clean koro" ba "Downloads er file gula type onujayi sajao".</li>
+      <li><b>Screen-er kichu na bujhle:</b> <kbd>Ctrl+Shift+Space</kbd> chepe jayga-ta select korun &rarr; Explain / Guide me / Do it for me.</li>
+      <li><b>Nirapotta:</b> Jhukir kaj korar age app apnar approval chay. Bondho korte <kbd>Ctrl+Shift+X</kbd>.</li>
+    </ol>
+  </div>
+
+  <h2 id="uninstall">Uninstall</h2>
+  <p><b>Windows:</b> Settings &rarr; Apps &rarr; Installed apps &rarr; PC Assistant &rarr; Uninstall. Your chats and settings are in the <i>Data</i> folder shown in the app's Settings; delete it if you want to remove everything.</p>
+  <p><b>Mac:</b> Drag PC Assistant from Applications to the Trash. Data is in <code>~/Library/Application Support/PC Assistant Data</code>.</p>
+  <p>Ollama and downloaded models are separate; remove them from Ollama or its own uninstaller if you no longer need them.</p>
+
+  <footer>
+    <img src="images/about.png" alt="About screen" class="shot" style="max-width:640px">
+    <div class="made">Created by <span class="gr">Bunnys Framelab</span></div>
+    <p><a href="https://www.instagram.com/bunnysframelab/">Instagram @bunnysframelab</a> &middot; <a href="https://github.com/uday629/PC-Assistant">GitHub</a></p>
+    <p class="mono">PC Assistant 1.2.0 &middot; Free to download and use &middot; See the LICENSE file for the terms</p>
+  </footer>
+</div>
+</body>
+</html>
